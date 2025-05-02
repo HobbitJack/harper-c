@@ -1,0 +1,31 @@
+.SH NAME
+harper.h - C interface for harper-core
+.SH SYNOPSIS
+\#include "harper.h"
+.SH DESCRIPTION
+
+.nf
+#define HARPER_H
+#define HARPER_C_VERSION "0.2.0"
+
+.nf
+typedef struct Document Document;
+typedef struct Lint Lint;
+typedef struct LintGroup LintGroup;
+
+.nf
+char* harper_get_core_version();
+char* harper_get_lib_version();
+Document* harper_create_document(const char* text);
+void harper_free_document(Document* doc);
+char* harper_get_document_text(const Document* doc);
+int32_t harper_get_token_count(const Document* doc);
+char* harper_get_token_text(const Document* doc, int32_t index);
+LintGroup* harper_create_lint_group(void);
+void harper_free_lint_group(LintGroup* lint_group);
+Lint** harper_get_lints(const Document* doc, LintGroup* lint_group, int32_t* count);
+void harper_free_lints(Lint** lints, int32_t count);
+char* harper_get_lint_message(const Lint* lint);
+int32_t harper_get_lint_start(const Lint* lint);
+int32_t harper_get_lint_end(const Lint* lint);
+
