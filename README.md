@@ -1,6 +1,6 @@
 # Harper C Example
 
-This directory contains a simple C example demonstrating how to use the Harper Rust library from C code.
+This directory contains a simple C example demonstrating how to use the Harper grammar-checking library (https://github.com/Automattic/harper) from C code.
 
 ## Building
 
@@ -59,4 +59,8 @@ The C API is defined in [src/harper.h](cci:7://file:///Users/hippietrail/harper/
 
 - Functions that return pointers return `NULL` on error
 - Functions that return integers return `-1` on error
-- Always check return values for errors 
+- Always check return values for errors
+
+# Contributors
+- @hippietrail for the initial hard work (his version is here: https://github.com/hippietrail/harper-c)
+- @HobbitJack as maintainer of this repository
